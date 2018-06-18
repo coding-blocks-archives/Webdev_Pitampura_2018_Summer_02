@@ -1,0 +1,33 @@
+p{
+
+}
+
+.odd{
+    color: chartreuse;
+}
+
+.even{
+    color: darkorchid;
+    visibility: hidden;
+}
+
+.even:active {
+    font-size: xx-large;
+}
+
+#first{
+    font-size: 20px;
+    color: aqua;
+}
+
+*{
+    color: crimson;
+}
+
+p{
+    color: coral;
+}
+
+h2, span{
+    color: cadetblue;
+}

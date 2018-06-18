@@ -1,0 +1,23 @@
+ul li{
+    color: crimson;
+}
+
+div > p{
+    color: darkorchid;
+}
+
+div ~ span{
+    color: aqua;
+}
+
+div + span{
+    color: coral;
+}
+
+[contenteditable]{
+    color: blanchedalmond;
+}
+
+[class*=ek]{
+    color: blue;
+}
