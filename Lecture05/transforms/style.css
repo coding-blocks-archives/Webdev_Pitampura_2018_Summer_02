@@ -1,0 +1,43 @@
+div {
+    height: 50px;
+    width: 50px;
+    background-color: steelblue;
+    margin: 10px;
+}
+
+#div1 {
+    transform: translateX(-10px)
+}
+
+#div2 {
+    transform: translateY(-30px)
+}
+
+#div3 {
+    transform: rotateX(45deg)
+}
+#div4 {
+    transform: rotateY(60deg)
+}
+#div5 {
+    transform: rotate(45deg)
+}
+#div6 {
+    transform: scale(0.5, 0.5)
+}
+
+#div7 {
+    transform: skew(30deg, 30deg)
+}
+
+#div8 {
+    transform: skewX(80deg)
+}
+
+#div9 {
+    transform: matrix(1, 0, 0, 1, 0, 0)
+}
+
+#div10 {
+    transform: rotate(10deg)
+}
