@@ -37,4 +37,5 @@ div {
     animation-name: myanim;
     animation-duration: 3s;
     animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
