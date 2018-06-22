@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fizz Buzz</title>
+</head>
+<body>
+<ul id="fizzbuzz"></ul>
+
+<script>
+    var startTime = new Date().getTime();
+    var list = document.getElementById("fizzbuzz");
+    var outputString = ""
+    for(i = 1 ; i < 1000 ;i++){
+        var contents  = "";
+        if(i%3 === 0){
+            contents += "Fizz"
+        }
+        if(i%5 === 0){
+            contents += "Buzz"
+        }
+        if(contents == ""){
+            contents = i;
+        }
+        outputString += "<li>" + contents + "</li>";
+    }
+    list.innerHTML = outputString;
+    var endTime = new Date().getTime();
+    console.log(endTime - startTime);
+</script>
+</body>
+</html>
