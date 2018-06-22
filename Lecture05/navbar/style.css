@@ -1,0 +1,25 @@
+
+nav ul {
+    padding: 0px;
+    background-color: bisque;
+}
+nav ul ul {
+    display: none;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 10px;
+    border-right: 2px solid darkblue;
+}
+
+nav li:hover > ul {
+    position: absolute;
+    display: inline-block;
+}
+nav ul {
+    white-space: nowrap;
+}
+nav ul ul > li {
+    display: block;
+}
