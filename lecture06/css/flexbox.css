@@ -1,0 +1,35 @@
+.box{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+    align-content: space-between;
+    height: 600px;
+    width:600px;
+    background-color: blue;
+}
+
+.item{
+
+    height: 50px;
+    width: 50px;
+    background-color: crimson;
+    margin:10px;
+    font-size: 18pt;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    .box{
+        height: 400px;
+        width: 400px;
+    }
+}
+
+@media (max-width: 400px) {
+    .box{
+        height: 200px;
+        width: 200px;
+    }
+}
