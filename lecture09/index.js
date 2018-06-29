@@ -15,6 +15,8 @@ window.onload = function () {
 
     function getItems() {
         todos = JSON.parse(localStorage.getItem("todos"))
+        if(todos == null)
+            todos = []
         console.log(todos);
     }
 
@@ -34,31 +36,50 @@ window.onload = function () {
         clearList();
         var appendThis;
 
-        for(i = 0 ; i < todos.length; i++){
-            list.appendChild(createElement(todos[i].task))
-        }
+            for (i = 0; i < todos.length; i++) {
+                list.appendChild(createElement(todos[i].task, i))
+            }
+
     }
 
     function clearList() {
-        while(list.firstChild){
+        while (list.firstChild) {
             list.firstChild.remove();
         }
     }
 
-    function createElement(task) {
+    function createElement(task, i) {
+
         var element = document.createElement("li");
         var spanElement = document.createElement("span");
         var delElement = document.createElement("button");
+        var upButton = document.createElement("button");
+        var downButton = document.createElement("button");
+
+
         spanElement.innerText = task
         delElement.innerText = "X";
+
+        upButton.innerText = "^"
+        downButton.innerText = "v"
+
         element.appendChild(spanElement);
         element.appendChild(delElement);
+
+        element.appendChild(upButton);
+        element.appendChild(downButton);
+
+        if (todos[i].checked) {
+            spanElement.style.textDecoration = "line-through";
+
+        }
         delElement.onclick = function (element) {
-            console.log(element.target.parentNode);
+            todos[i].checked = !todos[i].checked;
+            saveItems();
+            refreshList();
         }
         return element;
     }
-
 
 
     refreshList();
