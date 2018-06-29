@@ -1,0 +1,50 @@
+localStorage
+Storage { name: "name", length: 1 }
+localStorage.getItem("name")
+"Rishabh"
+localStorage.name2 = "Arnav"
+"Arnav"
+localStorage
+Storage { name: "name", name2: "name2", length: 2 }
+localStorage.name2
+"Arnav"
+localStorage['key'] = "value"
+"value"
+localStorage
+Storage { name: "name", name2: "name2", key: "key", length: 3 }
+localStorage['key']
+function key()
+localStorage["key"]
+function key()
+localStorage["name3"] = "Prateek"
+"Prateek"
+localStorage["name3"]
+"Prateek"
+localStorage.someNumber = 5
+5
+localStorage.someNumber
+"5"
+localStorage.someBoolean = true
+true
+localStorage.someBoolean
+"true"
+localStorage.someObject = {name: "Rishabh"}
+Object { name: "Rishabh" }
+localStorage.someObject
+"[object Object]"
+var parsed = JSON.stringify({name: "Rishabh"});
+undefined
+parsed
+"{\"name\":\"Rishabh\"}"
+localStorage.someObject = parsed
+"{\"name\":\"Rishabh\"}"
+localStorage.someObject
+"{\"name\":\"Rishabh\"}"
+JSON.parse(loca)
+ReferenceError: loca is not defined[Learn More] debugger eval code:1:1
+JSON.parse(localStorage.someObject)
+Object { name: "Rishabh" }
+var object = JSON.parse(localStorage.someObject)
+undefined
+object.name
+"Rishabh"
