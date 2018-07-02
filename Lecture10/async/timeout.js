@@ -8,5 +8,3 @@ let id = setInterval(function () {
 setTimeout(function () {
   clearInterval(id)
 }, 2000)
-
-
