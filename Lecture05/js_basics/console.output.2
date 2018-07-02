@@ -1,0 +1,102 @@
+let x = ''
+undefined
+x
+""
+typeof x
+"string"
+1 + '1'
+"11"
+1 + 1 + '1'
+"21"
+'1' + 1 + 1
+"111"
+'1' - 1 
+0
+1 - '1'
+0
+[1,2] - 1
+NaN
+[1,2] - [1]
+NaN
+1 == 1
+true
+1 == '1'
+true
+1 === '1'
+false
+[1,2] == [1,2]
+false
+let x = [1,2]
+SyntaxError: redeclaration of let x
+let x1 = [1,2]
+undefined
+let x2 = x1
+undefined
+x1 == x2
+true
+x1 === x2
+true
+'' == 0
+true
+parseInt('')
+NaN
++''
+0
+'' == 0
+true
+0.toString()
+SyntaxError: identifier starts immediately after numeric literal [Learn More]
+(0).toString()
+"0"
+'0' == 0
+true
+'' == 0
+true
+'0' == 0
+true
+'' == '0'
+false
+'' === 0
+false
+true == 1
+true
+false == 1
+false
+false == 0
+true
+true == 2
+false
+false == 2
+false
+false === 0
+false
+false == null
+false
+false == undefined
+false
+[] + []
+""
+[].toString()
+""
+[] == 0
+true
+typeof []
+"object"
+'\t'
+"	"
+'\t' == 0
+true
+'\t' == ''
+false
+'\t' == []
+false
+let j = {a: 10, b: 20}
+undefined
+j.toString()
+"[object Object]"
+JSON.stringify(j)
+"{"a":10,"b":20}"
+[] + {}
+"[object Object]"
+{} + []
+0

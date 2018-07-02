@@ -7,6 +7,18 @@ div {
     font-size: 26pt;
     font-family: sans-serif;
     color: white;
-
     box-shadow: 5px 5px 6px gray;
+    transition: 0.2s;
+}
+
+div:hover {
+    transform: translate(-5px, -5px);
+    box-shadow: 10px 10px 6px gray;
+    transition: 0.2s;
+}
+
+div:active {
+    transform: translate(4px, 4px);
+    box-shadow: 1px 1px 6px gray;
+    transition: 0.2s;
 }
