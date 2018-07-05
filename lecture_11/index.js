@@ -6,12 +6,22 @@ $(function () {
     var button = $('.button-class');
     var list = $('#list')
 
-   button.click(function () {
+   button.click((e)=>{
        console.log("Rishabh");
        var value = input.val();
        input.val("");
-       list.append(
-           `<li>${value}</li>`
+       console.log(e.currentTarget);
+
+       list.prepend(
+           $("<li>").html(value)
+               .click(function (e) {
+                   $(this).css("color", "red")
+                   console.log($(this).css("color"));
+                   $(this).fadeOut();
+               })
+               .append(
+               $("<button>").text("X")
+           )
        )
    })
 
