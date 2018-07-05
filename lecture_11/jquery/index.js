@@ -13,14 +13,23 @@ $(function () {
        console.log(e.currentTarget);
 
        list.prepend(
-           $("<li>").html(value)
-               .click(function (e) {
+           $("<li>")
+               .append(
+                   $("span")
+                   .click(function () {
+                       console.log("span click");
+                   }))
+               .click((e)=>{
                    $(this).css("color", "red")
                    console.log($(this).css("color"));
-                   $(this).fadeOut();
-               })
+                   console.log(e.currentTarget);
+               }).append(value)
                .append(
-               $("<button>").text("X")
+
+               $("<button>").text("X").click(function () {
+                   console.log($(this));
+               })
+
            )
        )
    })
