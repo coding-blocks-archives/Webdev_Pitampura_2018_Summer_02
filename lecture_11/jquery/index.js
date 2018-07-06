@@ -21,6 +21,7 @@ $(function () {
                    }))
                .click((e)=>{
                    $(this).css("color", "red")
+                   
                    console.log($(this).css("color"));
                    console.log(e.currentTarget);
                }).append(value)
