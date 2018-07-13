@@ -39,15 +39,17 @@ app.get('/',(req,res)=>{
 
 
 
-app.get('/addtodo', (req,res)=>{
-    todos.push(req.query.newtodo);
-    res.redirect("/");
-})
+// app.get('/addtodo', (req,res)=>{
+//     todos.push(req.query.newtodo);
+//     res.redirect("/");
+// })
 
 app.post('/addtodo', (req,res)=>{
     console.log(req.body);
     console.log("post request");
-    res.send("hello post request");
+    todos.push(req.body.newtodo);
+    // res.send("hello post request");
+    res.redirect("/");
 })
 
 
