@@ -6,11 +6,15 @@ const app = express();
 const taskRoute = require("./tasks.js");
 const notesRoute = require("./notes.js");
 
+
+
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 
 app.use("/tasks", taskRoute);
 app.use("/notes", notesRoute);
+app.use("/", express.static(__dirname + "/public_static"));
+
 
 
 

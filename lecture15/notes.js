@@ -7,6 +7,7 @@ const routes = express.Router();
 var notes = ["one", "two"]
 
 
+
 routes.get("/", (req,res)=>{
     res.send(notes);
 })
