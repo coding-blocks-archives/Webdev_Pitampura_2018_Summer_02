@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+<script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="/static/script.js"></script>
 <body>
 <form method="post" action="/">
-    <input type="text" name="task">
-    <input type="submit">
+    <input type="text" name="task" id="data">
+    <input type="submit" id="btn">
 </form>
 
-<ul>
+<ul id="list">
     {{#each todos}}
         <li>{{task}}</li>
     {{/each}}
