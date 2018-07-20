@@ -7,6 +7,7 @@ $(()=>{
 
         $.post("/api",
             {task: $("#data").val()},
+
             (data)=>{
                 data.forEach((task)=>{
                     $("#list").append(
