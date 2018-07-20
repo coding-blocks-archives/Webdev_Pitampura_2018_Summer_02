@@ -23,6 +23,22 @@ sequelize.sync().then(()=>{
 });
 
 
+todos.findAll().then((todos)=>{
+    // console.log(todos);
+    todos.forEach((todo)=>{
+        console.log(todo.task);
+        console.log(todo.done);
+
+    })
+    todos[0].done = !todos[0].done
+    todos[0].save();
+
+}).catch((err)=>{
+    console.log(err);
+})
+
+
+
 
 // sequelize.authenticate().then(()=>{
 //     console.log("database created");
