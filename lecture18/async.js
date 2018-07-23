@@ -49,3 +49,4 @@ async function task() {
 task();
 console.log("outside async await");
 
+
