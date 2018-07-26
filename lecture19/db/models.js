@@ -41,15 +41,26 @@ const paper = db.define('paper', {
 });
 
 paper.belongsTo(exam)
-paper.belongsTo(subject)
+exam.hasMany(paper);
 
+paper.belongsTo(subject)
+subject.hasMany(paper)
+
+const marks = db.define('marks', {
+    marks: Datatypes.INTEGER
+})
+
+marks.belongsTo(paper)
+
+marks.belongsTo(student);
 
 
 module.exports = {
     db,
     student,
     subject,
-    paper
+    paper,
+    marks
 }
 
 

@@ -4,9 +4,20 @@
 const express = require('express');
 const app = express();
 const model = require('./db/models');
+const routes = require("./routes/api");
 
-model.db.sync();
+app.use(express.json());
+app.use(express.urlencoded({extended: true}));
 
-app.listen(9090, ()=>{
-    console.log("magic happens at 9090");
-})
+app.use("/api", routes);
+
+model.db.sync().then(()=>{
+    app.listen(9090, ()=>{
+        console.log("magic happens at 9090");
+    })
+}).catch((e)=>{
+    console.log(e);
+});
+
+
+
