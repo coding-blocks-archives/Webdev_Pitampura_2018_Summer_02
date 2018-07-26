@@ -6,13 +6,10 @@ const app = express();
 const model = require('./db/models');
 const routes = require("./routes/api");
 
-app.use(express.json());
-app.use(express.urlencoded({extended: true}));
-
-app.use("/api", routes);
-
-module.exports = app;
-
-
-
-
+model.db.sync().then(()=>{
+    app.listen(9090, ()=>{
+        console.log("magic happens at 9090");
+    })
+}).catch((e)=>{
+    console.log(e);
+});
