@@ -42,8 +42,10 @@ passport.serializeUser(function (user, done) {
 })
 
 passport.deserializeUser(async function (id, done) {
+    console.log("deserialize user");
     var thisUser = await model.user.findAll({where: {id: id}})
-    done(null, thisUser);
+
+    done(null, thisUser[0]);
 })
 
 app.get("/", (req,res)=>{
@@ -62,9 +64,18 @@ app.post("/signin", passport.authenticate('local', {
                                                         successRedirect: "/user",
                                                         failureRedirect: "/signin"
 }))
+function checkAuth(req,res,next) {
+    if(req.isAuthenticated()){
+        next();
+    }else{
+        res.send("Login to see this page");
+    }
 
-app.get("/user", (req,res)=>{
-    res.send("Welcome user");
+}
+app.get("/user", checkAuth ,(req,res)=>{
+    console.log(req.sessionID)
+    console.log(req.user);
+    res.send("Welcome " + req.user.dataValues.username);
 })
 
 
