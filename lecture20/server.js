@@ -42,7 +42,7 @@ passport.serializeUser(function (user, done) {
 })
 
 passport.deserializeUser(async function (id, done) {
-    console.log("deserialize user");
+    // console.log("deserialize user");
     var thisUser = await model.user.findAll({where: {id: id}})
 
     done(null, thisUser[0]);
